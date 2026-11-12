@@ -8,8 +8,17 @@ import com.docker.msvc_usuarios.Entity.Usuario;
 public interface UsuarioService {
 
     List<Usuario> getAllUsuarios();
+
     Optional<Usuario> getUsuarioById(Long id);
+
     Usuario saveUsuario(Usuario usuario);
+
     void deleteUsuario(Long id);
+
+    Optional<Usuario> findByEmail(String email);
+
+    boolean existsByEmail(String email);
+
+    Optional<Usuario> porEmail(String email);
 
 }

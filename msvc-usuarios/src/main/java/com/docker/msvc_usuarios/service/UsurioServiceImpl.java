@@ -41,6 +41,28 @@ public class UsurioServiceImpl implements UsuarioService {
         usuarioRepositry.deleteById(id);
     }
 
- 
+    @Override
+    public Optional<Usuario> findByEmail(String email) {
+        
+        return  usuarioRepositry.findByEmail(email);
+
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        // TODO Auto-generated method stub
+
+        return  usuarioRepositry.existsByEmail(email);
+    }
+
+    @Override
+    public Optional<Usuario> porEmail(String email) {
+
+        return  usuarioRepositry.porEmail(email);
+        // TODO Auto-generated method stub
+    }
+
+  
 
 }
